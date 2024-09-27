@@ -1,0 +1,74 @@
+/* BASIC STYLES */
+body {
+    font-family: $font-body, sans-serif;
+    font-size:1em;
+    line-height:2em;
+    background: url($background-img) $white repeat-x;
+    margin:0;
+}   
+main {
+    width:940px;
+    margin:0 auto;
+    padding:0 10px;
+}
+
+/* NAVIGATION */
+figure {
+    width:400px;
+    height:190px;
+    background:url($logo-img) no-repeat 0 50px;
+    float:left;
+    display:block;
+    margin:0;
+}
+nav {
+    width:540px;
+    height:190px;
+    float:left;
+    text-align:right;
+
+    ul {
+        list-style-type:none;
+        margin-top:95px;
+
+        li {
+            display:inline;
+            font-size:0.8em;
+            margin-right:10px;
+            a {
+                color: $red;
+                text-decoration:none;
+                letter-spacing:-0.01em;
+
+                &:hover {color:$white;}
+            }
+        }
+    }
+}
+
+/* HEADER */
+header {
+    width:inherit;
+    clear:both;
+    text-align:center;
+    padding-top:40px;
+    img {
+        max-width:100%;
+        height:auto;
+    }
+    h1 {
+        @include setFont($red, 100, 4em);
+        line-height:0;
+    }
+    h2 {
+        @include setFont($white, 900, 2.5em);
+        line-height:0;
+        margin-bottom:70px;
+    }
+    h3 {
+        @include setFont($gray, 400, 2em);
+        line-height:0;
+        margin-bottom:50px;
+    }
+}
+
