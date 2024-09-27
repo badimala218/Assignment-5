@@ -4,43 +4,13 @@
     font-size: $size;
 }
 
-@mixin backImage($image: '../images/logo') {
-    background: url($image);
-    background-repeat: no-repeat;
-}
+// @mixin backImage($image: '../images/logo') {
+//     background: url($image);
+//     background-repeat: no-repeat;
+// }
 
 @mixin break($width: #{$small-width}) {
-    @if $width == #{$small-width} {
-        @include for-small-width {
-            @content;
-        }
-    } @else if $width == #{$medium-width} {
-        @include for-medium-width {
-            @content;
-        }
-    } @else {
-        @include for-big-width {
-                @content;
-        }
-    }
-}
-
-@mixin for-small-width() {
-    @media screen and (max-width: #{$small-width}) {
-        @content;
-    }
-}
-
-@mixin for-medium-width() {
-    @media screen and (max-width: #{$medium-width}) and 
-                      (min-width: #{$small-width}) {
-        @content;
-    }
-}
-
-@mixin for-big-width() {
-    @media (max-width: #{$big-width}) and 
-           (min-width: #{$medium-width}) {
+    @media screen and (max-width: $width) {
         @content;
     }
 }

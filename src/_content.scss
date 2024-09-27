@@ -9,14 +9,24 @@
     h1 {
         @include setFont($white, 100, 2.5em);
         padding-top:50px;
+        @include break($medium-width) {
+            font-size:2em;
+            padding-top:50px;
+        }
+        @include break($small-width) {
+            font-size:1.5em;
+            padding-top:30px;
+        }
     }
 }
 #content {
     width:940px;
     margin:20px auto;
+    @include break($big-width) {width:inherit;}
 
     h3 {
         @include setFont($gray, 400, 2em);
+        @include break($small-width) {font-size:1.6em;}
     }
     #products {
         width:460px;
@@ -32,5 +42,16 @@
     #testimonials {
         width:460px;
         float:right;
+    }
+    #products, #testimonials {
+        @include break($big-width) {
+            width:46%;
+            margin:0 2%;
+        }
+        @include break($medium-width) {
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
     }
 }
