@@ -18,16 +18,14 @@ main {
 
 /* NAVIGATION */
 figure {
-    width:400px;
-    height:190px;
+    @include setDimensions(400px, 190px);
     background:url($logo-img) no-repeat 0 50px;
     float:left;
     display:block;
     margin:0;
 
     @include break($big-width) {
-        width:inherit;
-        height:140px;
+        @include setDimensions(inherit, 140px);
         float:none;
         background-position:center;
     }
@@ -38,14 +36,12 @@ figure {
         
 }
 nav {
-    width:540px;
-    height:190px;
+    @include setDimensions(540px, 190px);
     float:left;
     text-align:right;
-
+    
     @include break($big-width) {
-        width:inherit;
-        height:50px;
+        @include setDimensions(inherit, 50px);
         float:none;
         text-align:center;
     }
@@ -54,13 +50,13 @@ nav {
     ul {
         list-style-type:none;
         margin-top:95px;
-
         @include break($big-width) {margin-top:0;}
 
         li {
             display:inline;
             font-size:0.8em;
             margin-right:10px;
+            
             @include break($big-width) {
                 font-size:1em;
                 margin:0 10px;

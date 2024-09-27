@@ -1,14 +1,12 @@
 /* FOOTER */
 .greybar {
-    width:100%;
-    height:90px;
+    @include setDimensions(100%, 90px);
     background:$graybar-color;
     clear:both;
     padding-top:30px;
 }
 footer {
-    width:100%;
-    height:120px;
+    @include setDimensions(100%, 120px);
     background:$footer-color;
     text-align:center;
     color:$white;
@@ -25,13 +23,12 @@ footer {
         }
         a {
             display:block;
-            width:36px;
-            height:36px;
+            @include setDimensions(36px, 36px);
             text-indent:-9999px;
         }
-        div.one     {background:url($social-img) 0 0;}
-        div.two     {background:url($social-img) -38px 0;}
-        div.three   {background:url($social-img) -76px 0;}
-        div.four    {background:url($social-img) -114px 0;}
+        div.one     {@include setSocialMediaBackground(1);}
+        div.two     {@include setSocialMediaBackground(2);}
+        div.three   {@include setSocialMediaBackground(3);}
+        div.four    {@include setSocialMediaBackground(4);}
     }
 }

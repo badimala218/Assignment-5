@@ -6,3 +6,4 @@ beginning/css/desktop.ini
 beginning/images/desktop.ini
 dist/css/desktop.ini
 dist/images/desktop.ini
+src/_normalize.scss

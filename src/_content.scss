@@ -1,7 +1,6 @@
 /* CONTENT */
 #headline {
-    width:100%;
-    height:130px;
+    @include setDimensions(100%, 130px);
     background:$headline-color;
     text-align:center;
     margin:0 auto;
